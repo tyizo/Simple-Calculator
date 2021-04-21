@@ -1,46 +1,18 @@
-from colored import fg
-
-# Colored Library Just for colors , you can remove it . 
-
-p = fg(162)
-b = fg(80)
-r = fg(9)
-print(b+"\n-----------------------------------------------------------------------------\n")
-print(b+"                       Simple Calculator\n                     For Learning.   \n                     ")
-print(b+"\n-----------------------------------------------------------------------------\n")
-
-# Functions 
-
-def add(num1, num2):
+def add(num1, num2): 
     return num1 + num2
-
-def subract(num1, num2):
+def minus(num1, num2):
     return num1 - num2
-
-def multiplay(num1, num2):
-    return num1 * num2
-
-def divide(num1, num2):
+def division(num1, num2):
     return num1 / num2
-
-print(b+'   Operations:')
-print(b+'   [+], [-], [*], [/]\n')
-
-select = input(p+'  Select One Operation Above ==> ')
-number_1 = int(input(p+'    Enter First Number ==> '))
-number_2 = int(input(p+'    Enter Second Number ==> '))
-
-if select == '+':
-    print(number_1, "+", number_2, "=", add(number_1, number_2))
-elif select == '-':
-    print(number_1, "-", number_2, "=", subract(number_1, number_2))
-elif select == '*':
-    print(number_1, "*", number_2, "=", multiplay(number_1, number_2))
-elif select == '/':
-    print(number_1, "/", number_2, "=", divide(number_1, number_2))
-
-else:
-    print(r+'Invalid Number\n')
-    input(r+'Enter [exit] to exit my app:\n ')
-    exit()
-
+def multiplication(num1, num2):
+    return num1 * num2
+class Calculator:
+    print('Simple Calculator.')
+    number_1 = int(input('Enter first number: '))
+    number_2 = int(input('Enter second number: '))
+    op = input('Enter Operation: ')
+    if op == '+': print(number_1, '+', number_2, '=', add(number_1, number_2))
+    elif op == '-': print(number_1, '-', number_2, '=', minus(number_1, number_2))
+    elif op == '/': print(number_1, '/', number_2, '=', division(number_1, number_2))
+    elif op == '*': print(number_1, '*', number_2, '=', add(number_1, number_2))
+    else: print('There is not operation like that')
